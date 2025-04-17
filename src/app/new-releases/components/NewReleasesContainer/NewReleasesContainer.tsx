@@ -1,26 +1,13 @@
 'use client';
-import { useGetNewReleases } from '@/newReleases/services/newReleasesService/useNewReleasesService';
-import NewReleasesList from '../NewReleasesList/NewReleasesList';
+import NewReleasesList from '@/newReleases/components/NewReleasesList/NewReleasesList';
 import styles from './NewReleasesContainer.module.css';
-import NewReleaseListSkeleton from '../NewReleasesListSkeleton/NewReleasesListSkeleton';
-import NewReleaseArtistFilter from '../NewReleaseArtistFilter/NewReleaseArtistFilter';
-import { useState } from 'react';
-
-const ALL_ARTISTS = 'All Artists';
+import NewReleaseListSkeleton from '@/newReleases/components/NewReleasesListSkeleton/NewReleasesListSkeleton';
+import NewReleaseArtistFilter from '@/newReleases/components/NewReleaseArtistFilter/NewReleaseArtistFilter';
+import { useNewReleases } from '@/newReleases/hooks/useNewReleases';
 
 export default function NewReleasesContainer() {
-  const { data: newReleasesResponse, isPending: isFetchingReleases } = useGetNewReleases();
-  const [selectedArtistName, setSelectedArtistName] = useState(ALL_ARTISTS);
-
-  const newReleases = newReleasesResponse?.items;
-  const releaseArtists = newReleases?.map((release) => release?.artists?.[0]?.name);
-  const filteredReleases = newReleases?.filter((release) => {
-    if (selectedArtistName === ALL_ARTISTS) return release;
-
-    return release?.artists?.[0].name.includes(selectedArtistName);
-  });
-
-  const handleArtistSelection = (artistName: string) => setSelectedArtistName(artistName);
+  const { releaseArtists, filteredReleases, isFetchingReleases, handleArtistSelection } =
+    useNewReleases();
 
   return (
     <div className={styles.container}>
