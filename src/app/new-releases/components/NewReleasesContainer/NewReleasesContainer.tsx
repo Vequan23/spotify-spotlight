@@ -19,7 +19,7 @@ export default function NewReleasesContainer() {
     <div className={styles.container}>
       <div>
         <div className={styles.headerContainer}>
-          <h1>2024 Spotify Album Releases</h1>
+          <h1>Spotify Album Releases</h1>
           <NewReleaseArtistFilter
             releaseArtists={releaseArtists ?? []}
             onArtistSelection={handleArtistSelection}

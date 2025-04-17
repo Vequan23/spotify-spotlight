@@ -11,8 +11,8 @@ const formatNumber = (num: number): string => {
 };
 
 export default function ArtistDetails({ artist }: ArtistDetailsProps) {
-  const imageUrl = artist?.images[2].url;
-  const name = artist?.name;
+  const imageUrl = artist.images[2].url;
+  const name = artist.name;
   const followers = artist.followers.total;
   const popularity = artist.popularity;
 
