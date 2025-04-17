@@ -1,3 +1,33 @@
-.release {
+.artwork {
+  margin-bottom: 1rem;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.date {
+  color: var(--color-text-secondary);
+}
+
+.name {
+  font-size: 18px;
+}
+
+.metadataContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.artistButton {
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: left;
+  text-decoration: underline;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
 }

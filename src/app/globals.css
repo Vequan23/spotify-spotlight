@@ -1,6 +1,12 @@
 :root {
   --font-geist-sans: var(--font-geist-sans);
   --font-geist-mono: var(--font-geist-mono);
+
+  --color-surface: #181818;
+  --color-text-secondary: #b3b3b3;
+  --color-accent: #404040;
+  --color-error: #e91429;
+  --color-skeleton: #b3b3b3;
 }
 
 * {

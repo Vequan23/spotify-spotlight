@@ -1,3 +1,3 @@
 export const ENDPOINTS = {
-  NEW_ALBUM_RELEASES: '/new-releases?limit=10&offset=3'
+  NEW_ALBUM_RELEASES: '/new-releases?limit=25&offset=0'
 }
