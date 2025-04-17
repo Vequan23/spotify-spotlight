@@ -8,26 +8,20 @@
   color: var(--color-text-secondary);
 }
 
-.name {
+.releaseName {
   font-size: 18px;
+}
+
+.artistName {
+  color: var(--color-text-primary);
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .metadataContainer {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-}
-
-.artistButton {
-  padding: 0;
-  background: none;
-  border: none;
-  text-align: left;
-  text-decoration: underline;
-  width: fit-content;
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
 }

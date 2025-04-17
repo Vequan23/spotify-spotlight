@@ -3,6 +3,7 @@
 import { SpotifyAlbum } from '@/newReleases/types/NewReleases.types';
 import React from 'react';
 import styles from './NewRelease.module.css';
+import Link from 'next/link';
 
 interface NewReleaseProps {
   release: SpotifyAlbum;
@@ -17,12 +18,15 @@ export default function NewRelease({ release }: NewReleaseProps) {
   });
   const imageUrl = images[0].url;
   const artistName = artists[0].name;
+  const artistLink = artists[0].external_urls.spotify;
   return (
     <div>
       <img alt="" className={styles.artwork} src={imageUrl}></img>
       <div className={styles.metadataContainer}>
-        <p className={styles.name}>{name}</p>
-        <button className={styles.artistButton}>{artistName}</button>
+        <p className={styles.releaseName}>{name}</p>
+        <Link href={artistLink} target="_blank" className={styles.artistName}>
+          {artistName}
+        </Link>
         <p className={styles.date}>{formattedDate}</p>
       </div>
     </div>
