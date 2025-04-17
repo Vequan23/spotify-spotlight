@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import { SpotifyAlbum } from '@/newReleases/types/NewReleases.types';
 import React from 'react';
@@ -14,12 +15,14 @@ export default function NewRelease({ release }: NewReleaseProps) {
     month: 'long',
     day: 'numeric',
   });
+  const imageUrl = images[0].url;
+  const artistName = artists[0].name;
   return (
     <div>
-      <img className={styles.artwork} src={images[0].url}></img>
+      <img alt="" className={styles.artwork} src={imageUrl}></img>
       <div className={styles.metadataContainer}>
         <p className={styles.name}>{name}</p>
-        <button className={styles.artistButton}>{artists[0].name}</button>
+        <button className={styles.artistButton}>{artistName}</button>
         <p className={styles.date}>{formattedDate}</p>
       </div>
     </div>
