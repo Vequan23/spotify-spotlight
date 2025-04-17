@@ -23,8 +23,8 @@ export default function NewRelease({ release }: NewReleaseProps) {
     <div>
       <img alt="" className={styles.artwork} src={imageUrl}></img>
       <div className={styles.metadataContainer}>
-        <p className={styles.releaseName}>{name}</p>
-        <Link href={artistLink} target="_blank" className={styles.artistName}>
+        <p className={styles.name}>{name}</p>
+        <Link href={artistLink} className={styles.artistName}>
           {artistName}
         </Link>
         <p className={styles.date}>{formattedDate}</p>

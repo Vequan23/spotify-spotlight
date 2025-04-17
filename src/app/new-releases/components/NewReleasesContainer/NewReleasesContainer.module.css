@@ -3,6 +3,9 @@
   padding: 2rem;
   max-width: 100%;
   box-sizing: border-box;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 2fr 1fr;
 }
 
 .header {

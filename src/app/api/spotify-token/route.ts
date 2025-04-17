@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID!;
+const client_id = process.env.SPOTIFY_CLIENT_ID!;
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET!;
 
 export async function GET() {

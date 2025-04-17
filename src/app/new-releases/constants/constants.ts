@@ -1,0 +1,1 @@
+export const ALL_ARTISTS_ID = 'ALL_ARTISTS'
