@@ -3,7 +3,7 @@ import { SpotifyArtist } from '@/newReleases/types/NewReleases.types';
 
 interface NewReleaseArtistFilterProps {
   releaseArtists: SpotifyArtist[];
-  onArtistSelection: (artistName: string) => void;
+  onArtistSelection: (id: string) => void;
 }
 
 export default function NewReleaseArtistFilter({

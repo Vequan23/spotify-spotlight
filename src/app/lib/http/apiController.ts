@@ -1,9 +1,8 @@
-// lib/apiController.ts
 import axios from 'axios';
 
 export const apiBaseUrl = `${process.env.NEXT_PUBLIC_SPOTIFY_API_URL}`;
 
-const TOKEN_EXPIRY_MS = 3500 * 1000; // 3500 seconds in milliseconds
+const TOKEN_EXPIRY_MS = 3500 * 1000;
 
 export const apiController = axios.create({
   baseURL: apiBaseUrl,
