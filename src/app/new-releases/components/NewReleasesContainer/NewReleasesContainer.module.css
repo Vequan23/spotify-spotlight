@@ -8,12 +8,23 @@
   grid-template-columns: 2fr 1fr;
 }
 
-.header {
-  margin-bottom: 1rem;
-}
-
 .headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .headerContainer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
 }
