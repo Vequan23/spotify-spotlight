@@ -18,10 +18,12 @@ export default function NewReleasesContainer() {
   return (
     <div className={styles.container}>
       <div>
-        <p>version: React</p>
+        <p>Version: React</p>
         <p>
-          vue version:{' '}
-          <a target="_blank" href="https://github.com/Vequan23/spotify-spotlight-vue"></a>
+          Vue version:{' '}
+          <a target="_blank" href="https://github.com/Vequan23/spotify-spotlight-vue">
+            Github
+          </a>
         </p>
 
         <div className={styles.headerContainer}>
