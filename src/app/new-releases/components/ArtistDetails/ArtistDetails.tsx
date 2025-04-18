@@ -6,7 +6,7 @@ interface ArtistDetailsProps {
   artist: SpotifyArtistDetails;
 }
 
-const formatNumber = (num: number): string => {
+const formatNumberToReadable = (num: number): string => {
   return num.toLocaleString();
 };
 
@@ -18,9 +18,9 @@ export default function ArtistDetails({ artist }: ArtistDetailsProps) {
 
   return (
     <div className={styles.container}>
-      <img alt={name} className={styles.image} width={100} height={100} src={imageUrl}></img>
+      <img alt={name} className={styles.image} src={imageUrl}></img>
       <h2 className={styles.name}>{name}</h2>
-      <p>Followers: {formatNumber(followers)}</p>
+      <p>Followers: {formatNumberToReadable(followers)}</p>
       <p>Popularity Score: {popularity}</p>
     </div>
   );
