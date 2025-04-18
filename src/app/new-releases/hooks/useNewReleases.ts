@@ -16,7 +16,7 @@ export const useNewReleases = () => {
     return release?.artists?.[0].id === selectedArtistId;
   });
 
-  const handleArtistSelection = (artistName: string) => setSelectedArtistId(artistName);
+  const handleArtistSelection = (id: string) => setSelectedArtistId(id);
 
   return {
     releaseArtists,
