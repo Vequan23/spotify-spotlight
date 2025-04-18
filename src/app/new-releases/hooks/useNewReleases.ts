@@ -6,7 +6,7 @@ import { ALL_ARTISTS_ID } from '../constants/constants';
 export const useNewReleases = () => {
   const { data: newReleasesResponse, isPending: isFetchingReleases } = useGetNewReleases();
   const [selectedArtistId, setSelectedArtistId] = useState(ALL_ARTISTS_ID);
-  const { data: selectedArtistDetails, isPending: isFetchingSelectingArtistsDetails } = useGetNewReleaseArtist(selectedArtistId);
+  const { data: selectedArtistDetails } = useGetNewReleaseArtist(selectedArtistId);
 
   const newReleases = newReleasesResponse?.items;
   const releaseArtists = newReleases?.map((release) => release?.artists?.[0]);
@@ -24,6 +24,5 @@ export const useNewReleases = () => {
     handleArtistSelection,
     selectedArtistDetails,
     isFetchingReleases,
-    isFetchingSelectingArtistsDetails
   }
 }
