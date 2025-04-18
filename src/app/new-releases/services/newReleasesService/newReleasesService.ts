@@ -1,4 +1,4 @@
-import { SpotifyArtistDetails, SpotifyNewReleasesResponse } from './../../types/NewReleases.types';
+import { SpotifyArtistDetails, SpotifyNewReleasesResponse } from '@/newReleases/types/NewReleases.types';
 import { apiController } from '@/lib/http/apiController';
 import { ENDPOINTS } from "@/lib/http/endpoints"
 
