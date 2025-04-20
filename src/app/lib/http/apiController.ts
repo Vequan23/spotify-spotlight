@@ -18,12 +18,11 @@ apiController.interceptors.request.use(async (config) => {
 
   if (!accessToken || now >= tokenExpiry) {
     try {
-      const res = await fetch('/api/spotify-token', {
+      const { data } = await axios.get('/api/spotify-token', {
         headers: {
           'x-internal-api-key': process.env.NEXT_PUBLIC_API_KEY || ''
         }
       });
-      const data = await res.json();
       accessToken = data.token;
 
       tokenExpiry = now + TOKEN_EXPIRY_MS;
